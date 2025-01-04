@@ -11,3 +11,5 @@
 #define AUDIO_INIT_DELAY
 
 #endif
+
+#define TAPPING_TERM 200
