@@ -103,28 +103,31 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     // !         @         #          $          %          ^          &          *          (          )          _          -
 
     // Row 1: Brackets, quotes, and punctuation
-    KC_LCBR,   KC_RCBR,  KC_PIPE,   KC_DQUO,   KC_COLN,   KC_SCLN,   KC_QUES,   KC_SLSH,   KC_LABK,   KC_RABK,   KC_COMM,   KC_DOT,
-    // {         }         |          "          :          ;          ?          /          <          >          ,          .
+    KC_LBRC,   KC_RBRC,  KC_LCBR,   KC_RCBR,   KC_BSLS,   KC_PIPE,   KC_SCLN,   KC_COLN,   KC_QUOT,   KC_DQUO,   KC_COMM,   KC_DOT,
+    // [         ]         {          }          \          |          ;          :          '          "          ,          .
 
-    // Row 2: Additional symbols
-    KC_MINS,   KC_PLUS,  KC_EQL,    KC_QUOT,   KC_GRV,    KC_TILD,   KC_BSLS,   _______,   _______,   _______,   _______,   _______,   _______,
-    // -          +         =          '          `          ~      backslash
+    // Row 2: Remaining Symbols
+    KC_LABK,   KC_RABK,  KC_SLSH,   KC_QUES,   KC_GRV,    KC_TILD,   _______,   _______,   _______,   _______,   _______,   _______,   _______,
+    // <         >         /          ?          `          ~       
 
     _______,   _______,  _______,                         _______,                         _______,              _______,   _______,   _______
   ),
   [3] = LAYOUT_625(
-    // Row 0: Common app shortcuts
-    QK_GESC,   LGUI(KC_Q), LGUI(KC_W), LGUI(KC_E), LGUI(KC_R), LGUI(KC_T), LGUI(KC_Y), LGUI(KC_U), LGUI(KC_I), LGUI(KC_O), LGUI(KC_P), KC_BSPC,
-    // Q: Quit app    W: Close window   E: Explorer   R: Refresh    T: New tab    Y: Redo      U: -          I: -         O: -        P: Print
+    // Row 0: Windows - Virtual Desktop & System Controls
+    LGUI(LCTL(KC_D)), LGUI(LCTL(KC_LEFT)), LGUI(LCTL(KC_RGHT)), LGUI(LCTL(KC_F)), LGUI(LCTL(LSFT(KC_B))), LGUI(LSFT(KC_S)), LGUI(LSFT(KC_3)), LGUI(LSFT(KC_4)), LGUI(LSFT(KC_5)), LGUI(LCTL(LSFT(KC_3))), LGUI(LCTL(LSFT(KC_4))), KC_BSPC,
+    // New Desktop    Desk Left            Desk Right           Network Search    Reset Graphics          Snip Tool         Screenshot        Area Shot         SS Toolbar        SS to Clipboard         Area to Clipboard
 
-    // Row 1: Text edit and navigation
-    KC_TAB,    LGUI(KC_A), LGUI(KC_S), LGUI(KC_D), LGUI(KC_F), LGUI(KC_G), LGUI(KC_H), LGUI(KC_J), LGUI(KC_K), LGUI(KC_L), KC_SCLN,   KC_ENT,
-    // A: Select all  S: Save        D: Duplicate   F: Find      G: Find next H: -         J: -          K: -         L: Lock
+    // Row 1: Windows - Window Management
+    LGUI(LSFT(KC_LEFT)), LGUI(LSFT(KC_RGHT)), LGUI(LSFT(KC_UP)), LGUI(LSFT(KC_DOWN)), LGUI(LSFT(KC_M)), LGUI(LCTL(KC_Q)), LGUI(LALT(KC_ESC)), LGUI(LALT(KC_D)), LGUI(LSFT(KC_DOT)), LGUI(LSFT(KC_G)), LGUI(LCTL(KC_M)), LGUI(LCTL(KC_MS_WH_UP)),
+    // Move Win Left     Move Win Right       Max Vertical       Min Vertical         Restore All       Lock Screen       Force Quit          Toggle Dock       Show Hidden         Go to Folder      Magnifier         Mag Zoom In
 
-    // Row 2: Common
-    KC_LSFT,   LGUI(KC_Z), LGUI(KC_X), LGUI(KC_C), LGUI(KC_V), LGUI(KC_B), LGUI(KC_N), LGUI(KC_M), LGUI(KC_COMM), LGUI(KC_DOT), KC_SLSH, KC_UP, KC_TRNS,
-    // Z: Undo       X: Cut         C: Copy        V: Paste     B: Bold      N: New win   M: Minimize   ,: -           .: -
-    _______,   _______,  _______,              _______,                                     _______,              _______,   _______,   _______
+    // Row 2: MacOS General Shortcuts
+    LGUI(LSFT(KC_3)), LGUI(LSFT(KC_4)), LGUI(LSFT(KC_5)), LGUI(LCTL(LSFT(KC_3))), LGUI(LCTL(LSFT(KC_4))), LGUI(LALT(KC_ESC)), LGUI(LCTL(KC_Q)), LGUI(LALT(KC_D)), LGUI(LSFT(KC_DOT)), LGUI(LSFT(KC_G)), LGUI(LCTL(KC_PWR)), LGUI(LALT(KC_PWR)), LGUI(LALT(KC_M)),
+    // Screen Shot    Area Shot         SS/RC Toolbar     Screen to Clip          Area to Clip            Force Quit          Lock Screen       Toggle Dock       Show Hidden         Go to Folder      Force Restart       Sleep               Min All
+
+    // Row 3: MacOS Misc. Shortcuts
+    LGUI(LSFT(KC_4)), _______,  _______,                  _______,                                     _______,              _______,   _______,   _______
+    // Window Capture
   )                   
 };
 
